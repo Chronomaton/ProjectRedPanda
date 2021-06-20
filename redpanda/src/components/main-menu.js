@@ -6,7 +6,7 @@ function MainMenu() {
             <h1>Project Red Panda</h1>
 
             <div>
-                <Button variant="contained" disabled >continue</Button>
+                <Button variant="contained" disabled>continue</Button>
             </div>
             <div>
                 <Button variant="contained" onclick="newGame()">new game</Button>
