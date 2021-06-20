@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 import MainMenu from './components/MainMenu' 
-import Game from './components/Game' 
+import Game from './Game' 
 
 class App extends React.Component {
 
