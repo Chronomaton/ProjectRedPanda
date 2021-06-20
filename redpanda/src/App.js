@@ -1,20 +1,32 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.css';
 import MainMenu from './components/MainMenu' 
 import Game from './components/Game' 
 
-function App() {
+class App extends React.Component {
 
-  const [start, setStart] = useState(false);
+  constructor(props){
+    super(props)
+    this.state = {start: false}
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        {start ? <Game/> : <MainMenu props={setStart}/>}
-      </header>
-      
-    </div>
-  );
+    this.startGame = this.startGame.bind(this);
+  }
+
+  startGame() {
+    this.setState({start: true});
+  }
+
+  render() {
+
+    return (
+      <div className="App">
+        <header className="App-header">
+          {this.state.start ? <Game/> : <MainMenu start={this.startGame}/>}
+        </header>
+        
+      </div>
+    );
+  }
 }
 
 export default App;
