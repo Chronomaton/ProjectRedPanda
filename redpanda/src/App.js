@@ -1,9 +1,5 @@
 import './App.css';
-import MainMenu from './components/main-menu.js' 
-
-function newGame() {
-  window.location.href = "game.html";
-}
+import MainMenu from './components/main-menu' 
 
 function App() {
   return (

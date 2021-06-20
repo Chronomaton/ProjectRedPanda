@@ -1,4 +1,11 @@
+import Game from './Game';
+
 import Button from '@material-ui/core/Button';
+import {
+    Switch,
+    Route,
+    Link
+} from 'react-router-dom';
 
 function MainMenu() {
     return (
@@ -9,7 +16,7 @@ function MainMenu() {
                 <Button variant="contained" disabled>continue</Button>
             </div>
             <div>
-                <Button variant="contained" onclick="newGame()">new game</Button>
+                <Button variant="contained">new game</Button>
             </div>
             <div>
                 <Button variant="contained" disabled>options</Button>
