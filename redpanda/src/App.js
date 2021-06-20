@@ -1,11 +1,16 @@
+import React, { useState } from 'react'
 import './App.css';
-import MainMenu from './components/main-menu' 
+import MainMenu from './components/MainMenu' 
+import Game from './components/Game' 
 
 function App() {
+
+  const [start, setStart] = useState(false);
+
   return (
     <div className="App">
       <header className="App-header">
-        <MainMenu></MainMenu>
+        {start ? <Game/> : <MainMenu props={setStart}/>}
       </header>
       
     </div>
