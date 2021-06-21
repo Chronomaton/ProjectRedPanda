@@ -1,17 +1,8 @@
 import React from 'react'
 
 class Inventory extends React.Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      resources: this.props.inventory.resources
-    }
-  }
-
   renderElement() {
-    const resources = Object.assign({}, this.state.resources)
+    const resources = Object.assign({}, this.props.inventory.resources)
     let resourceList = []
     if(Object.keys(resources).length > 0) {
       Object.keys(resources).forEach((item, index) => {
@@ -19,10 +10,6 @@ class Inventory extends React.Component {
       });
     }
     return resourceList
-  }
-
-  componentDidMount() {
-    
   }
 
   render() {
