@@ -1,3 +1,4 @@
+import Header from './sections/Header';
 import React from 'react';
 import Fleet from './Fleet';
 import Resource from "./Resource"
@@ -33,6 +34,7 @@ class Game extends React.Component {
     render(){
         return (
             <div className="Game">
+                <Header />
                 <h2>If you see this, you are on GAME page</h2>
                 <Fleet/>
                 <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
