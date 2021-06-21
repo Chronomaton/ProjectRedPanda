@@ -1,0 +1,22 @@
+{
+  "dirt": {
+    "value": 3,
+    "difficulty": 1
+  },
+  "rock": {
+    "value": 5,
+    "difficulty": 3
+  },
+  "small-tree": {
+    "value": 13,
+    "difficulty": 8
+  },
+  "clay": {
+    "value": 20,
+    "difficulty": 13
+  },
+  "boulder": {
+    "value": 25,
+    "difficulty": 16
+  }
+}
