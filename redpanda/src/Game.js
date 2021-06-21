@@ -1,8 +1,8 @@
 import Header from './sections/Header';
 import React from 'react';
-import Fleet from './Fleet';
-import Resource from "./Resource"
-import Inventory from "./Inventory"
+import Fleet from './components/Fleet';
+import Resource from "./components/Resource"
+import Inventory from "./components/Inventory"
 
 
 class Game extends React.Component {
