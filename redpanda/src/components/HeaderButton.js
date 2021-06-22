@@ -1,8 +1,18 @@
+import React from 'react';
+import { Button } from '@material-ui/core';
 
-function HeaderButton() {
-    return (
-        <></>
-    );
+class HeaderButton extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <Button variant="text">
+                {this.props.name}
+            </Button>
+        );
+    }
 }
 
 export default HeaderButton;

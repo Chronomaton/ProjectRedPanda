@@ -4,7 +4,7 @@ import React from 'react';
 import Resource from "./components/Resource"
 import Inventory from "./components/Inventory"
 import "./Game.css"
-
+import { ButtonGroup, Button } from '@material-ui/core';
 
 class Game extends React.Component {
     constructor(props) {
@@ -51,14 +51,18 @@ class Game extends React.Component {
     render(){
         return (
             <div className="Game">
-                <div className="column-flex">
-                    <Header />
-                    <h2>Planet Name</h2>
-                    <span className="temp-planet"></span>
-                    {/* <Fleet/> */}
-                    <div className="lower-ribbon-flex">
+                <Header />
+                <div class="horizontal-flex">
+                    <div class="column-flex" style={{flexGrow: "1"}}>
+                        <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
                         <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
                         <Inventory inventory={this.state.inventory}/>
+                    </div>
+                    <div class="column-flex" style={{flexGrow: "3"}}>
+                        
+                        <h2>Planet Name</h2>
+                        <span class="temp-planet"></span>
+                        {/* <Fleet/> */}
                     </div>
                 </div>
             </div>
