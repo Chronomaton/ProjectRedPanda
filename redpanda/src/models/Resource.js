@@ -6,7 +6,10 @@ class Resource {
     this.cost = cost
     this.difficulty = difficulty
     this.unlocked = false
+    this.amount = 0
 
+
+    //static vars
   }
 
   unlockResource() {

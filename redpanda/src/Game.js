@@ -10,14 +10,10 @@ class Game extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            inventory: {
-                credits: 0,
-                resources: {}
-            },
-            stats: {
-                gatherLevel: 1,
-                getherExp: 0,
-            }
+            credits: 0,
+            resources: {},
+            gatherLevel: 8,
+            getherExp: 0,
         }
 
         this.addToInventory = this.addToInventory.bind(this)
@@ -25,19 +21,10 @@ class Game extends React.Component {
 
     addToInventory(item) {
         this.setState((state) => {
-            let itemObject = Object.defineProperty({}, item.name, {
-                enumerable:  true,
-                value: {
-                    cost: item.cost,
-                    quantity: state.inventory.resources[item.name] ? state.inventory.resources[item.name].quantity + 1 : 1
-                },
-            })
+            let newState = state.resources
 
-            let newState = {
-                inventory: {
-                    resources: itemObject
-                }
-            }
+            newState[item.name] = item
+            newState[item.name].amount += 1
             return newState
         })
     }
@@ -54,9 +41,8 @@ class Game extends React.Component {
                 <Header />
                 <div class="horizontal-flex">
                     <div class="column-flex" style={{flexGrow: "1"}}>
-                        <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
-                        <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
-                        <Inventory inventory={this.state.inventory}/>
+                        <Resource gatherLevel={this.state.gatherLevel} addToInventory={this.addToInventory}/>
+                        <Inventory resources={this.state.resources}/>
                     </div>
                     <div class="column-flex" style={{flexGrow: "3"}}>
                         
@@ -72,7 +58,7 @@ class Game extends React.Component {
 
 Game.defaultProps = {
     stats: {
-        gatherLevel: 1,
+        gatherLevel: 16,
         gatherExp: 0,
     }
 }

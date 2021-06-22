@@ -3,12 +3,14 @@ import React from 'react'
 class Inventory extends React.Component {
   renderElement() {
 
-    let resources = this.props.inventory.resources
+    let resources = this.props.resources
     let resourceList = []
+    console.log(resources)
 
     if(Object.keys(resources).length > 0) {
       Object.keys(resources).forEach((item, index) => {
-        resourceList.push(<div key={item + "-inventory-" + index}>{item} : {resources[item].quantity}</div>)
+        console.log(item)
+        resourceList.push(<div key={item + "-inventory-" + index}>{item} : {resources[item].amount}</div>)
       });
     }
     return resourceList

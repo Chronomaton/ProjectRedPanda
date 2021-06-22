@@ -22,7 +22,10 @@ class Resource extends React.Component {
 
     Object.keys(ResourceList).forEach((key) => {
       let currResource = new ResourceModel(key, ResourceList[key].cost, ResourceList[key].difficulty);
+      console.log("difficulty : " + currResource.difficulty)
       if(this.props.gatherLevel >= currResource.difficulty) {
+        console.log("adding resource : " + currResource.name)
+
         resources.push(currResource)
       };
     })
