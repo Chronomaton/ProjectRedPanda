@@ -3,6 +3,7 @@ import React from 'react';
 import Fleet from './components/Fleet';
 import Resource from "./components/Resource"
 import Inventory from "./components/Inventory"
+import "./Game.css"
 
 
 class Game extends React.Component {
@@ -34,11 +35,16 @@ class Game extends React.Component {
     render(){
         return (
             <div className="Game">
-                <Header />
-                <h2>If you see this, you are on GAME page</h2>
-                <Fleet/>
-                <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
-                <Inventory inventory={this.state.inventory}/>
+                <div class="column-flex">
+                    <Header />
+                    <h2>Planet Name</h2>
+                    <span class="temp-planet"></span>
+                    {/* <Fleet/> */}
+                    <div class="lower-ribbon-flex">
+                        <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
+                        <Inventory inventory={this.state.inventory}/>
+                    </div>
+                </div>
             </div>
         );
     }
