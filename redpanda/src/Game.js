@@ -35,6 +35,7 @@ class Game extends React.Component {
     render(){
         return (
             <div className="Game">
+                <Header />
                 <div class="horizontal-flex">
                     <div class="column-flex" style={{flexGrow: "1"}}>
                         <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
@@ -42,7 +43,7 @@ class Game extends React.Component {
                         {/* <Inventory inventory={this.state.inventory}/> */}
                     </div>
                     <div class="column-flex" style={{flexGrow: "3"}}>
-                        <Header />
+                        
                         <h2>Planet Name</h2>
                         <span class="temp-planet"></span>
                         {/* <Fleet/> */}

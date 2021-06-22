@@ -3,7 +3,7 @@ import { AppBar, Toolbar, ButtonGroup } from '@material-ui/core';
 
 function Header() {
     return (
-        <AppBar color="primary" elevation={0}>
+        // <AppBar color="primary" elevation={0}>
             <Toolbar style={{minHeight: "5vh"}}>
                 <ButtonGroup variant="text" color="primary">
                     <HeaderButton name="Shipyard" />
@@ -12,7 +12,7 @@ function Header() {
                     <HeaderButton name="Map" />
                 </ButtonGroup>
             </Toolbar>
-        </AppBar>
+        // </AppBar>
     );
 }
 
