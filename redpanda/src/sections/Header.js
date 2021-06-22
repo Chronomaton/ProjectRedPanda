@@ -1,13 +1,16 @@
 import HeaderButton from "../components/HeaderButton";
+import { AppBar, Toolbar } from '@material-ui/core';
 
 function Header() {
     return (
-        <div className="gameHeader">
-            <HeaderButton name="Shipyard" />
-            <HeaderButton name="Factory" />
-            <HeaderButton name="Fleet" />
-            <HeaderButton name="Map" />
-        </div>
+        <AppBar>
+            <Toolbar>
+                <HeaderButton name="Shipyard" />
+                <HeaderButton name="Factory" />
+                <HeaderButton name="Fleet" />
+                <HeaderButton name="Map" />
+            </Toolbar>
+        </AppBar>
     );
 }
 
