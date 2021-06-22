@@ -18,7 +18,7 @@ class Resource extends React.Component {
     let resources = []
 
     Object.keys(ResourceList).forEach((key) => {
-      let currResource = new ResourceModel(key, ResourceList[key].value, ResourceList[key].difficulty);
+      let currResource = new ResourceModel(key, ResourceList[key].cost, ResourceList[key].difficulty);
       if(this.props.gatherLevel >= currResource.difficulty) {
         resources.push(currResource)
       };
@@ -33,7 +33,7 @@ class Resource extends React.Component {
           return(
             <div key={item.name + "-mining-" + index}>
               <li>{item.name}</li>
-              <li>Value: {item.value}</li>
+              <li>Value: {item.cost}</li>
               <li>difficulty: {item.difficulty}</li>
               <Button onClick={() => this.props.addToInventory(item)}> Mine </Button>
             </div>
