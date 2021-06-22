@@ -35,14 +35,17 @@ class Game extends React.Component {
     render(){
         return (
             <div className="Game">
-                <div class="column-flex">
-                    <Header />
-                    <h2>Planet Name</h2>
-                    <span class="temp-planet"></span>
-                    {/* <Fleet/> */}
-                    <div class="lower-ribbon-flex">
+                <div class="horizontal-flex">
+                    <div class="column-flex" style={{flexGrow: "1"}}>
                         <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
-                        <Inventory inventory={this.state.inventory}/>
+                        <Resource gatherLevel={this.state.stats.gatherLevel} addToInventory={this.addToInventory}/>
+                        {/* <Inventory inventory={this.state.inventory}/> */}
+                    </div>
+                    <div class="column-flex" style={{flexGrow: "3"}}>
+                        <Header />
+                        <h2>Planet Name</h2>
+                        <span class="temp-planet"></span>
+                        {/* <Fleet/> */}
                     </div>
                 </div>
             </div>
