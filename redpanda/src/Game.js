@@ -1,10 +1,13 @@
 import Header from './sections/Header';
+import MainContent from './sections/MainContent';
 import React from 'react';
 //import Fleet from './components/Fleet';
 import Resource from "./components/Resource"
 import Inventory from "./components/Inventory"
-import "./Game.css"
+import "./styling/Game.css"
 import { ButtonGroup, Button } from '@material-ui/core';
+
+import { ContentView } from './models/ContentView';
 
 class Game extends React.Component {
     constructor(props) {
@@ -14,9 +17,9 @@ class Game extends React.Component {
             resources: {},
             gatherLevel: 8,
             getherExp: 0,
+            view: ContentView.MAP,
         }
-
-        this.addToInventory = this.addToInventory.bind(this)
+        this.changeView = this.changeView.bind(this);
     }
 
     addToInventory(item) {
@@ -35,10 +38,18 @@ class Game extends React.Component {
         })
     }
 
+    changeView(newView) {
+        this.setState({
+            view: newView
+        });
+        console.log(newView);
+    }
+
     render(){
         return (
             <div className="Game">
-                <Header />
+                <Header onChange={this.changeView}/>
+                <MainContent view={this.state.view} />
                 <div class="horizontal-flex">
                     <div class="column-flex" style={{flexGrow: "1"}}>
                         <Resource gatherLevel={this.state.gatherLevel} addToInventory={this.addToInventory}/>
