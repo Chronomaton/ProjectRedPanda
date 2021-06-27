@@ -6,16 +6,18 @@ import ContentView from '../models/ContentView';
 class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            buttonList: []
-        }
-        this.getHeaderButtons();
+
+        this.getHeaderButtons = this.getHeaderButtons.bind(this);
     }
 
     getHeaderButtons() {
+        let buttons = []
+
         Object.values(ContentView).forEach((value) => {
-            this.state.buttonList.push( <HeaderButton name={value} onChange={this.props.onChange}/> )
+            buttons.push( <HeaderButton name={value} onChange={this.props.onChange} /> )
         });
+
+        return buttons;
     }
 
     render() {
@@ -23,7 +25,7 @@ class Header extends React.Component {
             <AppBar color="primary" elevation={0} position="static">
                 <Toolbar style={{minHeight: "5vh"}}>
                     <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-                        {this.state.buttonList}
+                        {this.getHeaderButtons()}
                     </ButtonGroup>
                 </Toolbar>
             </AppBar>
