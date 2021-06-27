@@ -51,15 +51,15 @@ class Game extends React.Component {
             <div className="Game">
                 <Header onChange={this.changeView}/>
                 <MainContent view={this.state.view} />
-                <div class="horizontal-flex">
-                    <div class="column-flex" style={{flexGrow: "1"}}>
+                <div className="horizontal-flex">
+                    <div className="column-flex" style={{flexGrow: "1"}}>
                         <Resource gatherLevel={this.state.gatherLevel} addToInventory={this.addToInventory}/>
                         <Inventory resources={this.state.resources}/>
                     </div>
-                    <div class="column-flex" style={{flexGrow: "3"}}>
+                    <div className="column-flex" style={{flexGrow: "3"}}>
                         
                         <h2>Planet Name</h2>
-                        <span class="temp-planet"></span>
+                        <span className="temp-planet"></span>
                         {/* <Fleet/> */}
                     </div>
                 </div>
