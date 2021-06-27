@@ -1,15 +1,20 @@
 import React from 'react';
 import '../styling/Map.css';
-import LeftColumn from '../sections/LeftColumn';
+import Sidebar, { Sides } from '../sections/Sidebar';
 
 class Map extends React.Component {
     render() {
         return (
             <div className='map'>
-                <LeftColumn>
-                    {/* <h2>Test sidebar</h2> */}
-                </LeftColumn>
-                {/* <h2>Outside of left sidebar</h2> */}
+                <Sidebar side={Sides.LEFT}>
+                    <h2>Test left column</h2>
+                </Sidebar>
+                <div>
+                    <h2>Main map stuff go here :)</h2>
+                </div>
+                <Sidebar side={Sides.RIGHT}>
+                    <h2>Right column here if necessary</h2>
+                </Sidebar>
             </div>
         );
     }

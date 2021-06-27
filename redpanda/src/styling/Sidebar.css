@@ -1,11 +1,9 @@
 .side-bar {
     height: 100%;
-    min-width: 10vw;
-    max-width: fit-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid;
     border-radius: 0;
-    border-color: rgba(64, 194, 133, 0.693);
+    border-color: rgba(0, 0, 0, 0.693);
     padding: 5px 5px 5px 5px;
 }
