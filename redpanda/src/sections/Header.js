@@ -3,10 +3,6 @@ import HeaderButton from "../components/HeaderButton";
 import { AppBar, Toolbar, ButtonGroup } from '@material-ui/core';
 
 class Header extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <AppBar color="primary" elevation={0} position="static">
