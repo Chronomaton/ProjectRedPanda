@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css';
+import './styling/App.css';
 import MainMenu from './components/MainMenu' 
 import Game from './Game' 
 

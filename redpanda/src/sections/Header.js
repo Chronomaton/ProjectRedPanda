@@ -1,8 +1,7 @@
 import React from "react";
 import HeaderButton from "../components/HeaderButton";
 import { AppBar, Toolbar, ButtonGroup } from '@material-ui/core';
-
-const headerNames = ['Shipyard', 'Factory', 'Fleet', 'Map'];
+import ContentView from '../models/ContentView';
 
 class Header extends React.Component {
     constructor(props) {
@@ -14,8 +13,8 @@ class Header extends React.Component {
     }
 
     getHeaderButtons() {
-        headerNames.forEach((header, i) => {
-            this.state.buttonList.push( <HeaderButton name={header} onChange={this.props.onChange}/>)
+        Object.values(ContentView).forEach((value) => {
+            this.state.buttonList.push( <HeaderButton name={value} onChange={this.props.onChange}/> )
         });
     }
 

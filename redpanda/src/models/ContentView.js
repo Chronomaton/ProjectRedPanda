@@ -1,4 +1,4 @@
-export const ContentView = {
+export default {
     SHIPYARD: "Shipyard",
     FACTORY: "Factory",
     FLEET: "Fleet",

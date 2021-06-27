@@ -7,7 +7,7 @@ import Inventory from "./components/Inventory"
 import "./styling/Game.css"
 import { ButtonGroup, Button } from '@material-ui/core';
 
-import { ContentView } from './models/ContentView';
+import ContentView from './models/ContentView';
 
 class Game extends React.Component {
     constructor(props) {
