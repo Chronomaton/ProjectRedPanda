@@ -19,6 +19,7 @@ class Game extends React.Component {
             getherExp: 0,
             view: ContentView.MAP,
         }
+        this.addToInventory = this.addToInventory.bind(this);
         this.changeView = this.changeView.bind(this);
     }
 
