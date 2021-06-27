@@ -5,7 +5,6 @@ import React from 'react';
 import Resource from "./components/Resource"
 import Inventory from "./components/Inventory"
 import "./styling/Game.css"
-import { ButtonGroup, Button } from '@material-ui/core';
 
 import ContentView from './models/ContentView';
 
