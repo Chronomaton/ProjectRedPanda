@@ -41,7 +41,7 @@ class Game extends React.Component {
     changeView(newView) {
         this.setState({
             view: newView
-        }, 
+        });
     }
 
     render(){
