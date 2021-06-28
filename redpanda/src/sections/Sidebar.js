@@ -15,9 +15,9 @@ class Sidebar extends React.Component {
 
     attachSide(side) {
         if (side === Sides.LEFT) {
-            return { "border-right": "2px" };
+            return { "borderRight": "2px" };
         } else if (side === Sides.RIGHT) {
-            return { "border-left": "2px" };
+            return { "borderLeft": "2px" };
         }
     }
 

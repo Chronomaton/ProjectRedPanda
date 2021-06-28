@@ -1,16 +1,5 @@
 import React from "react";
-
-import Map from "../components/Map";
-import Fleet from "../components/Fleet";
-import Shipyard from "../components/Shipyard";
-import Factory from "../components/Factory";
-
-const components = {
-    "Map": Map,
-    "Fleet": Fleet,
-    "Shipyard": Shipyard,
-    "Factory": Factory
-}
+import ContentView from "../models/ContentView";
 
 class MainContent extends React.Component {
     constructor(props) {
@@ -21,7 +10,7 @@ class MainContent extends React.Component {
 
     View() {
         console.log(this.props.view)
-        const SpecificView = components[this.props.view]
+        const SpecificView = ContentView.getViewFromString(this.props.view);
         return <SpecificView />;
     }
 

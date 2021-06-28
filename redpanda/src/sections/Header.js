@@ -13,7 +13,7 @@ class Header extends React.Component {
     getHeaderButtons() {
         let buttons = []
 
-        Object.values(ContentView).forEach((value) => {
+        Object.values(ContentView.getNames()).forEach((value) => {
             buttons.push( <HeaderButton name={value} onChange={this.props.onChange} /> )
         });
 

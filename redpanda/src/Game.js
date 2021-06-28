@@ -1,12 +1,13 @@
 import Header from './sections/Header';
 import MainContent from './sections/MainContent';
 import React from 'react';
-//import Fleet from './components/Fleet';
 import Resource from "./components/Resource"
 import Inventory from "./components/Inventory"
 import "./styling/Game.css"
 
 import ContentView from './models/ContentView';
+
+const defaultView = ContentView.getDefaultName();
 
 class Game extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class Game extends React.Component {
             resources: {},
             gatherLevel: 8,
             getherExp: 0,
-            view: ContentView.MAP,
+            view: defaultView,
         }
         this.addToInventory = this.addToInventory.bind(this);
         this.changeView = this.changeView.bind(this);
@@ -58,7 +59,6 @@ class Game extends React.Component {
                         
                         <h2>Planet Name</h2>
                         <span className="temp-planet"></span>
-                        {/* <Fleet/> */}
                     </div>
                 </div>
             </div>
