@@ -1,7 +1,8 @@
 {
   "dirt": {
     "cost": 3,
-    "difficulty": 1
+    "difficulty": 1,
+    "image": "Dirt.png"
   },
   "rock": {
     "cost": 5,

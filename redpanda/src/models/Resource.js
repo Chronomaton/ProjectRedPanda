@@ -1,10 +1,11 @@
 
 
 class Resource {
-  constructor(name, cost, difficulty) {
+  constructor(name, cost, difficulty, image) {
     this.name = name
     this.cost = cost
     this.difficulty = difficulty
+    this.image = image
     this.unlocked = false
     this.amount = 0
 

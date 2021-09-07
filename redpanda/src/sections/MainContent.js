@@ -9,7 +9,6 @@ class MainContent extends React.Component {
     }
 
     View() {
-        console.log(this.props.view)
         const SpecificView = ContentView.getViewFromString(this.props.view);
         return <SpecificView />;
     }
