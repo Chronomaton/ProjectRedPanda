@@ -17,13 +17,11 @@ Resources are displayed by the users current "gather level", as the gather level
 
 ###### Resources
 Resources are their own object, each has 3 stats:
-1. Difficulty
-Difficulty is the required "gather level" a player must have to mine that resource. If gather level is too low the resource will not display
-2. Exp
-Exp is obtainable by mining resources. Each resource mined adds that much EXP to the player which increment gather level
-3. Value
-Value is the sell cost of a resource. It can be used to obtain cash which will allow the player to buy upgrades, increasing the mining ability of the player
+1. ***Difficulty*** is the required "gather level" a player must have to mine that resource. If gather level is too low the resource will not display
+2. ***EXP*** is obtainable by mining resources. Each resource mined adds that much EXP to the player which increment gather level
+3. ***Value*** is the sell cost of a resource. It can be used to obtain cash which will allow the player to buy upgrades, increasing the mining ability of the player
 
+___
 
 
 This project is a work in progress and was made among a group of 3 friends
