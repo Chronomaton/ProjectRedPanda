@@ -1,5 +1,9 @@
 # ProjectRedPanda
 ### A fun mining game made with React to practice web development skills
+#### Purpose
+Project Red Panda was created with the intention to learn React while creating a game that is fun to play for both the users and creators
+It is a 2D idle game where the users must manage their resource collection skills to create progress in the game and aims to be a space traveler game where users can travel from different planets to collect resources in order to achieve interplanetary domination.
+Unfortunately it is currently being delayed due to school and work. 
 #### Features
 ###### 4 views
 Project Red Panda currently has 4 placeholder views:
